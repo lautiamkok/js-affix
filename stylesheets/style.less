@@ -1,0 +1,1389 @@
+/**
+ * ===============================================================
+ * Guide.
+ * ===============================================================
+ */
+
+.row,
+.grid-x {
+    // border:1px solid red;
+    width: 100%;
+}
+
+.columns,
+.cell {
+    // border: 1px solid blue;
+
+}
+
+.expanded {
+    // border:1px solid black;
+}
+
+/**
+ * ===============================================================
+ * Base
+ * ===============================================================
+ */
+
+/**
+ * Variables.
+ */
+@title-font: 'Bellefair', serif;
+@main-font: 'Raleway', sans-serif;
+@sub-font: 'Patua One', cursive;
+@text-font-size: 16px;
+@text-color: #000000;
+@path-image: "../image";
+@path-font: "fonts";
+@path-node-modules: "../node_modules";
+@background-grey: #f8f7f5;
+@line-grey: #e2e1dd;
+@colour-dark: #313131;
+@theme-blue: #57c8e1;
+@theme-pink: #ed218f;
+
+/**
+ * ===============================================================
+ * Base - functions
+ * ===============================================================
+ */
+
+/**
+ * Add box shadow.
+ * @param  {[type]} @size: 0             [description]
+ * @param  {[type]} @r:0   [description]
+ * @param  {[type]} @g:0   [description]
+ * @param  {[type]} @b:0   [description]
+ * @param  {[type]} @a:1   [description]
+ * @return {[type]}        [description]
+ */
+// .boxShadow(@h-shadow: 0; @v-shadow: 0; @blur: 0; @spread: 0; @r:0; @g:0; @b:0; @a:1) {
+//     -moz-box-shadow:    @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+//     -webkit-box-shadow: @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+//     box-shadow:         @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+// }
+//
+// Or better:
+// http://stackoverflow.com/questions/40317404/less-potentially-unhandled-rejection-2-no-matching-definition-was-found
+// http://lesscss.org/features/#mixins-parametric-feature-mixins-with-multiple-parameters
+.boxShadow(@h-shadow: 0; @v-shadow: 0; @blur: 0; @spread: 0; @rgba: 0, 0, 0, 1) {
+    @r: extract(@rgba, 1);
+    @g: extract(@rgba, 2);
+    @b: extract(@rgba, 3);
+    @a: extract(@rgba, 4);
+    -moz-box-shadow:    @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+    -webkit-box-shadow: @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+    box-shadow:         @h-shadow @v-shadow @blur @spread rgba(@r, @g, @b, @a);
+}
+
+/**
+ * Adding animation.
+ * @param  {[type]} @speed: 0.25s         [description]
+ * @return {[type]}         [description]
+ */
+.transition(@speed: 0.25s) {
+    /*For Safari 3.1 to 6.0 */
+    -webkit-transition: @speed;
+    transition: @speed;
+}
+
+/**
+ * Adding fade in out effect on hover, etc.
+ * @param  {[type]} $property: color         [description]
+ * @param  {[type]} $time:     1s            [description]
+ * @param  {[type]} $method:   ease-in-out   [description]
+ * @return {[type]}            [description]
+ */
+.fadeInOut(@property: color, @time: 1s, @method: ease-in-out) {
+    -webkit-transition: @property @time @method;
+    -moz-transition: @property @time @method;
+    -ms-transition: @property @time @method;
+    -o-transition: @property @time @method;
+    transition: @property @time @method;
+}
+
+.changePlaceholderColour() {
+    color: #000000;
+    font-weight: bold;
+
+    font-family: @sub-font;
+    font-size: 24px;
+    font-style: italic;
+}
+
+/**
+ * Center element vertically & horizontally.
+ */
+.centerElement() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/**
+ * ===============================================================
+ * Dependencies
+ * ===============================================================
+ */
+
+// @import 'social-media.css';
+// @import 'font-face.css';
+@import '@{path-node-modules}/foundation-sites/dist/css/foundation.min.css';
+@import '@{path-node-modules}/foundation-icon-fonts/foundation-icons.css';
+@import '@{path-node-modules}/foundation-icon-fonts/foundation-icons.css';
+@import '@{path-node-modules}/swiper/dist/css/swiper.min.css';
+@import '@{path-node-modules}/perfect-scrollbar/dist/css/perfect-scrollbar.css';
+
+/**
+ * ===============================================================
+ * HTML/ Global
+ * ===============================================================
+ */
+html,
+body {
+    font-family: @main-font;
+    font-size: @text-font-size;
+    position: relative;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.heading.parent {
+    font-size: 40px !important;
+}
+
+.card {
+    background-color: @background-grey;
+    border: none;
+}
+
+.card-divider {
+    background-color: @background-grey;
+    text-align: center;
+    padding-bottom: 0;
+
+    .heading {
+        width: 100%;
+        background-color: none;
+        font-size: 31px;
+        line-height: 32px;
+    }
+
+    .heading a {
+        color: #000;
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.card-section {
+    padding-top: 0;
+
+    hr {
+        width: 50%;
+        border:1px solid #000;
+
+    }
+
+    p {
+        letter-spacing: 1.5px;
+    }
+
+}
+
+.button-black,
+.button-az,
+.button-bid {
+    background-color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+
+    &:hover {
+        background-color: red;
+    }
+}
+
+.box-center {
+    .centerElement()
+}
+
+/**
+ * ===============================================================
+ * Search
+ * ===============================================================
+ */
+
+.search-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999999999;
+
+    height: 100%;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    display: none;
+
+    .menu-block-search {
+        background-color: #fff;
+        padding-bottom: 40px;
+        display: none;
+    }
+}
+
+.menu-control-search {
+
+    i {
+        color: @colour-dark;
+    }
+
+    a {
+        // border: 1px solid red;
+        font-size: 31px;
+
+        // Make the button square.
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    a:hover {
+        background-color: red;
+    }
+
+    a:hover i {
+        color: #fff;
+    }
+}
+
+.menu-search {
+
+    .input-search-container {
+        width: 90%;
+
+        input {
+            font-size: 21px;
+            // Make the button square.
+            padding-top: 27px;
+            padding-bottom: 27px;
+        }
+    }
+
+    .button-search-container {
+        width: 10%;
+    }
+
+    button {
+        width: 100%;
+
+        // border: 1px solid red;
+        font-size: 31px;
+
+        // Make the button square.
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+   .menu-search {
+
+        .input-search-container {
+            width: 85%;
+        }
+
+        .button-search-container {
+            width: 15%;
+        }
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+   .menu-search {
+
+        .input-search-container {
+            width: 85%;
+        }
+
+        .button-search-container {
+            width: 15%;
+        }
+    }
+}
+
+/**
+ * ===============================================================
+ * Header: navbar, menu
+ * ===============================================================
+ */
+
+header {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // z-index: 99999999;
+}
+
+.navbar {
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    position: relative;
+
+    .navbar-items {
+        border-bottom: 1px solid @line-grey;
+    }
+}
+
+.affix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999999;
+    display: none;
+    // border: 1px solid red;
+}
+
+.menu-logo {
+    border-bottom: 1px solid @line-grey;
+
+    .site-logo a {
+        font-family: @title-font;
+        font-size: 41px;
+        font-weight: normal !important;
+        text-transform: uppercase;
+        color: #000;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.menu-mobile-only {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    background-color: #fff;
+    background: #fff;
+
+    i {
+        color: @colour-dark;
+    }
+
+    a {
+        // border: 1px solid red;
+        font-size: 31px;
+
+        // Make the button square.
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    a:hover {
+        background-color: red;
+    }
+
+    a:hover i {
+        color: #fff;
+    }
+}
+
+.menu-access {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999999;
+
+    i {
+        color: @colour-dark;
+        // font-size: 31px;
+        // display: inline-block;
+        // float: left;
+        // border: 1px solid red;
+    }
+
+    // span {
+    //     display: inline-block;
+    //     // border: 1px solid red;
+    // }
+}
+
+.button-arrow-up {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 999999;
+    display: none;
+
+    &:hover i {
+        background-color: red;
+        color: #fff;
+    }
+
+    i {
+        // Remove white space at the bottom.
+        float: left;
+    }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+   .menu-access {
+        i {
+            // font-size: 31px;
+        }
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+   .menu-access {
+        i {
+            // font-size: 31px;
+        }
+    }
+}
+
+.menu-main {
+    z-index: 99999;
+}
+
+/**
+ * ===============================================================
+ * Aside: navbar, menu
+ * ===============================================================
+ */
+
+.navbar-aside {
+    position: fixed;
+    left:0;
+    top: 0;
+    z-index: 9999999999;
+    height: 100%;
+    display: none;
+
+    .overlay-menu-aside {
+        height: 100%;
+        background-color: #000;
+        background-color: rgba(0, 0, 0, 0.6);
+        // border: 4px solid blue;
+    }
+
+    .menu-block-aside {
+        background-color: #000;
+        display: none;
+        // border: 4px solid red;
+        // overflow: auto;
+    }
+
+    .menu li a {
+        line-height: 40px;
+        background-color: #000;
+    }
+
+    .scrollbar-container {
+        position: relative;
+        width: 100%;
+        height: 85%;
+    }
+}
+
+/**
+ * Break the very long text.
+ * https://stackoverflow.com/questions/45269978/foundation-6-4-1-how-to-fix-the-dropdown-menu-width
+ */
+.accordion-menu.menu > li a {
+    white-space: normal !important;
+}
+
+.menu-control-aside {
+    border-bottom: 1px solid @line-grey;
+
+    li a {
+        font-size: 31px;
+
+        // Make the button square.
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    li a:hover {
+        background-color: red;
+    }
+
+    li a i {
+        color: #fff;
+    }
+
+    li a:hover i {
+        color: #fff;
+    }
+}
+
+.menu-main-aside {
+    border-bottom: 1px solid @line-grey;
+
+    li a {
+        color: #fff;
+        padding-left: 20px;
+    }
+
+    li a:hover {
+        color: #ccc;
+    }
+}
+
+.menu-access-aside {
+    li a {
+        color: #fff;
+        padding-left: 20px;
+    }
+
+    li a:hover {
+        color: #ccc;
+    }
+}
+
+/**
+ * ===============================================================
+ * Header: menu/ dropdown
+ * ===============================================================
+ */
+
+/**
+ * Get rid of the arrow
+ * https://stackoverflow.com/questions/45268043/foundation-6-4-1-how-to-make-the-dropdown-menu-centre-under-its-parent
+ */
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+    content: none;
+}
+
+/**
+ * Change arrow colour.
+ * http://foundation.zurb.com/forum/posts/675
+ */
+.accordion-menu.menu > li.is-accordion-submenu-parent > a::after {
+    // border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+}
+
+/**
+ * Custom arrow.
+ * https://stackoverflow.com/questions/20573331/how-to-style-dropdown-buttons-using-zurb-foundation-5
+ */
+.accordion-menu.menu > li.is-accordion-submenu-parent > a::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    // background-image: url("../images/1.jpg");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -2.5px;
+    top: 22.5px;
+    border: 1px solid #000;
+}
+
+/**
+ * Place it centered.
+ * Do it dynamically for each dropdown with jQuery.
+ */
+.dropdown.menu > li.opens-right > .is-dropdown-submenu {
+    margin-left: -55px;
+}
+
+/**
+ * Fix the dropdown width.
+ * https://stackoverflow.com/questions/45269978/foundation-6-4-1-how-to-fix-the-dropdown-menu-width
+ */
+.dropdown.menu > li.opens-right > .is-dropdown-submenu {
+    min-width: 200px !important;
+}
+
+// Change language option width.
+.dropdown.menu > li.opens-right > .is-dropdown-submenu.language-options {
+    min-width: 110px !important;
+    margin-left: 0;
+}
+
+/**
+ * Break the very long text.
+ * https://stackoverflow.com/questions/45269978/foundation-6-4-1-how-to-fix-the-dropdown-menu-width
+ */
+.dropdown.menu > li.opens-right > .is-dropdown-submenu a {
+    white-space: normal !important;
+}
+
+.menu-mobile-only {
+    > li > a {
+        line-height: 40px;
+        color: #000000;
+    }
+}
+
+.menu.menu-main,
+.menu.menu-access {
+    > li {
+        // line-height: 40px;
+        // color: #000000;
+        // border: 1px solid black;
+        position: relative;
+    }
+
+    > li > a:not(.child) {
+        line-height: 40px;
+        color: #000000;
+    }
+
+    > li > a:hover:not(.child) {
+        color: #000000;
+    }
+
+    li .line-text {
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    > li:hover .line-text {
+        border-bottom: 1px solid red;
+        color: #000000;
+    }
+
+    ul {
+        border: none;
+    }
+
+    ul li a {
+        width: 100%;
+        color: #000000;
+        line-height: 28px;
+        text-align: center;
+        display: block;
+        border-bottom: 1px solid @line-grey;
+        border-left: 1px solid @line-grey;
+        border-right: 1px solid @line-grey;
+    }
+
+    ul li:first-child a {
+        border-top: 1px solid @line-grey;
+    }
+
+    ul li a:hover {
+        color: #fff;
+        background-color: #000;
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+    }
+
+    ul li:first-child a:hover {
+        border-top: 1px solid black;
+    }
+}
+
+footer .nav-block .menu,
+footer .social-block .menu{
+    > li > a:not(.child) {
+        line-height: 40px;
+        color: #000000;
+    }
+
+    > li > a:hover:not(.child) {
+        color: #000000;
+    }
+}
+
+/**
+ * ===============================================================
+ * Main: swiper
+ * ===============================================================
+ */
+
+main {
+    position: relative;
+}
+
+.overlay {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+/**
+ * ===============================================================
+ * Swiper
+ * ===============================================================
+ */
+
+.banner-swiper-block {
+
+    .swiper-container {
+        width: 100%;
+        height: 500px;
+    }
+    .swiper-slide {
+        text-align: center;
+
+        /* Center slide text vertically */
+        .centerElement()
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .swiper-banner-slide {
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .swiper-slide .title {
+        font-family: @title-font;
+        font-size: 41px;
+        line-height: 40px;
+        font-weight: 300;
+    }
+
+    .swiper-slide .subtitle {
+        font-size: 21px;
+    }
+
+    .swiper-slide .text {
+        font-size: 21px;
+        letter-spacing: 1px;
+    }
+
+    .slide-info-container {
+        color: #fff;
+    }
+
+    .button.button-details {
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: #fff;
+        border: 2px solid #fff;
+        text-transform: uppercase;
+    }
+
+    .button.button-details:hover,
+    .button.button-details:focus {
+        color: #000;
+        background-color: #fff;
+        border: 2px solid #fff;
+    }
+
+    /**
+     * Customise the arrow button.
+     * https://stackoverflow.com/questions/45381871/swiper-how-to-customise-arrow-buttons
+     */
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
+        right:10px;
+        padding: 30px;
+        display: none;
+    }
+
+    .swiper-button-prev {
+        left:0;
+    }
+
+    .swiper-button-next {
+        right:0;
+    }
+}
+
+.columns-swiper-block {
+
+    // Place the arrow button outside the swiper.
+    .swiper-supper-container {
+        position: relative;
+        // border: 1px solid blue;
+    }
+
+    .swiper-button-prev {
+        left:-60px;
+    }
+
+    .swiper-button-next {
+        right:-60px;
+    }
+}
+
+/**
+ * Media query
+ * http://foundation.zurb.com/sites/docs/media-queries.html
+ */
+/* Large and up */
+@media screen and (min-width: 64em) {
+    // .slide-info-container {
+    //     bottom: 10%;
+    //     left: 10%;
+    // }
+}
+
+/**
+ * ===============================================================
+ * Home page > Main > Grid item
+ * ===============================================================
+ */
+
+.heading {
+    font-family: @title-font;
+}
+
+.grid-block {
+    padding: 30px 0 40px;
+    border-top: 1px solid @line-grey;
+
+    .heading.parent {
+        padding-bottom: 20px;
+    }
+}
+
+.grid-item {
+    .image-container {
+        background-color: @background-grey;
+    }
+}
+
+/**
+ * ===============================================================
+ * Grid items > Stack
+ * ===============================================================
+ */
+
+.grid-stacks {
+    .card {
+        // Over-write.
+        padding: 0;
+        margin: 0;
+    }
+
+    .cell {
+      // Add custom padding/
+      padding: 10px;
+    }
+
+    .cell.stack {
+          padding: 0;
+      }
+
+    .cell.stack .grid-item {
+        margin: 10px;
+    }
+
+    .grid-item {
+        // border: 1px solid red;
+        // background-color: grey;
+        position: relative;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .button-image  {
+        z-index: 99;
+    }
+
+    .image-desc {
+        position: absolute;
+        z-index: 999;
+        display: none;
+        background-color:rgba(0, 0, 0, 0.5);
+        text-align: center;
+        padding: 10px 20px;
+    }
+
+    .image-desc a {
+        color: #fff;
+        font-size: 21px;
+        line-height: 21px;
+        letter-spacing: 1.5px;
+
+    }
+
+    .image-desc:hover {
+
+        background-color:rgba(255, 255, 255, 0.7);
+
+        a {
+            color: #000;
+        }
+
+    }
+
+    .grid-item:hover .image-desc {
+        display: block
+    }
+}
+
+.eq-height > .cell {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+}
+
+.eq-height > .cell {
+    height:100%;
+}
+
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    //
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    //
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    //
+}
+
+/**
+ * ===============================================================
+ * Footer
+ * ===============================================================
+ */
+
+footer {
+    display: block;
+
+    .menu li a:hover {
+       color: grey !important;
+    }
+}
+
+footer .nav-block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: block;
+    width: 100%;
+    background-color: @background-grey;
+
+    .menu:not(.last) li a {
+       padding-top: 0;
+       padding-bottom: 0;
+    }
+
+    .vertical.menu.last li a {
+        font-family: @title-font;
+        font-size: 25px;
+        padding-left: 0;
+        border-bottom: 1px solid @line-grey;
+    }
+}
+
+footer .social-block {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    i {
+        font-size: 41px;
+    }
+}
+
+footer .copyright-block {
+    background-color: #000;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    p {
+        margin: 0;
+    }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+    footer .menu li {
+        text-align: center;
+    }
+}
+
+/**
+ * ===============================================================
+ * Others - Material Icons
+ * ===============================================================
+ */
+
+.material-icons {
+    // border: 1px solid red;
+    padding: 0;
+    margin: 0;
+
+    &.md-light {
+        color: rgba(255, 255, 255, 1);
+    }
+    &.md-dark-background {
+        background-color: @colour-dark
+    }
+    &.md-60 {
+        font-size: 60px;
+    }
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@{path-font}/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url('@{path-font}/MaterialIcons-Regular.woff2') format('woff2'),
+    url('@{path-font}/MaterialIcons-Regular.woff') format('woff'),
+    url('@{path-font}/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+
+    &.md-80 {
+        font-size:80px;
+        line-height: 20px;
+    }
+}
+
+/**
+ * ===============================================================
+ * Customise Foundation font path.
+ * ===============================================================
+ */
+
+@font-face {
+  font-family: "foundation-icons";
+  src: url("@{path-font}/foundation-icons.eot");
+  src: url("@{path-font}/foundation-icons.eot?#iefix") format("embedded-opentype"),
+       url("@{path-font}/foundation-icons.woff") format("woff"),
+       url("@{path-font}/foundation-icons.ttf") format("truetype"),
+       url("@{path-font}/foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// /**
+//  * ===============================================================
+//  * Header
+//  * ===============================================================
+//  */
+// h1 {
+//     font-family: @main-font;
+//     font-size: 54px;
+//     padding-bottom: 10px;
+// }
+
+// h2 {
+//     font-family: @main-font;
+//     font-size: 54px;
+// }
+
+// .header {
+//     padding-top: 40px;
+
+// }
+
+// .slogan {
+//     padding-bottom: 10px;
+//     span {
+//         font-size: 200px;
+//         line-height: 160px;
+//         display: block;
+//     }
+// }
+
+// /* Small only */
+// @media screen and (max-width: 39.9375em) {
+//     .slogan span {
+//         font-size: 120px;
+//         line-height: 100px;
+//         /*border: 1px solid blue;*/
+//     }
+// }
+
+// /* Medium only */
+// @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+//     .slogan span {
+//         font-size: 160px;
+//         line-height: 120px;
+//         /*border: 1px solid green;*/
+//     }
+// }
+
+// ul.social-media li {
+//     // border:1px solid blue;
+//     a {
+//         padding: 5px;
+//         display: inline-block;
+//         font-size: 26px;
+//         color: #000;
+//     }
+// }
+
+// /**
+//  * ===============================================================
+//  * Main
+//  * ===============================================================
+//  */
+// .know-more {
+//     margin-top: -15px;
+//     padding-bottom: 10px;
+//     span {
+//         font-family: @sub-font;
+//         font-size: 72px;
+//         font-style: italic;
+//         font-weight: bold;
+//         line-height: 72px;
+//         letter-spacing: 4px;
+//         background-color: #ed218f;
+//         padding: 0 20px;
+//     }
+//     span.no-cutoff {
+//         line-height: 86px;
+//     }
+// }
+
+// .tell-us span {
+//     font-family: @sub-font;
+//     font-size: 36px;
+//     font-style: italic;
+//     line-height: 36px;
+//     display: block;
+//     padding: 0 20px;
+// }
+
+// hr {
+//     margin-top: -15px;
+//     border: 5px solid black;
+// }
+
+// .love-hear {
+//     padding-top: 40px;
+// }
+
+// /**
+//  * ===============================================================
+//  * Main - forms
+//  * ===============================================================
+//  */
+// .container-form-subscribe {
+//     display: block;
+//     margin-top: -20px;
+//     margin-bottom: 40px;
+//     overflow: hidden;
+// }
+
+// form.form-subscribe {
+//     input.form-input {
+//         background-color: #000000;
+//         color: #ffffff;
+//         font-size: 24px;
+//         border: 1px solid #000000;
+//     }
+// }
+
+// /*
+// Change the Chrome autocomplete colour.
+// https://codepen.io/team/css-tricks/pen/oxyJxR
+// */
+// form.form-subscribe input.form-input:-webkit-autofill,
+// form.form-comment input.form-input:-webkit-autofill {
+//     border: 1px solid #000000;
+//     -webkit-text-fill-color: #ffffff;
+//     -webkit-box-shadow: 0 0 0px 1000px #000000 inset;
+//     transition: background-color 5000s ease-in-out 0s;
+// }
+
+// form.form-comment {
+//     padding: 40px 20px;
+
+//     input.form-input,
+//     textarea.form-input {
+//         background-color: @theme-blue;
+//         color: #000000;
+//         font-size: 24px;
+//     }
+// }
+
+// .alert,
+// .form-error {
+//     font-size: 24px;
+// }
+
+
+// Change the placeholder colour.
+// http://foundation.zurb.com/forum/posts/19004-customcss-file-doesnt-work--placeholder-color-cant-change
+// https://stackoverflow.com/questions/2610497/change-an-html5-inputs-placeholder-color-with-css
+
+// form.form-comment {
+//     input::-webkit-input-placeholder,
+//     textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+//         .changePlaceholderColour()
+//     }
+
+//     input:-moz-placeholder,
+//     textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+//         .changePlaceholderColour()
+//     }
+
+//     input::-moz-placeholder,
+//     textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+//         .changePlaceholderColour()
+//     }
+
+//     input:-ms-input-placeholder,
+//     textarea::-ms-input-placeholder { /* Internet Explorer 10-11 */
+//         .changePlaceholderColour()
+//     }
+
+//     input::-ms-input-placeholder,
+//     textarea::-ms-input-placeholder { /* Microsoft Edge */
+//         .changePlaceholderColour()
+//     }
+// }
+
+// .button.button-send {
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+//     padding-left: 30px;
+//     padding-right: 30px;
+//     text-transform: uppercase;
+
+//     font-family: @sub-font;
+//     font-size: 24px;
+//     font-weight: bold;
+//     background-color: #000;
+//     color: #fff;
+
+//     &:hover,
+//     &:focus {
+//         background-color: #ed218f;
+//     }
+// }
+
+// form.form-subscribe {
+//     .button.button-send {
+//         padding-left: 10px;
+//         padding-right: 10px;
+//         padding-top: 5px;
+//         padding-bottom: 5px;
+//     }
+// }
+
+// /**
+//  * ===============================================================
+//  * Others - Material Icons
+//  * ===============================================================
+//  */
+// @font-face {
+//   font-family: 'Material Icons';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.eot'); /* For IE6-8 */
+//   src: local('Material Icons'),
+//     local('MaterialIcons-Regular'),
+//     url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.woff2') format('woff2'),
+//     url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.woff') format('woff'),
+//     url('@{path-node-modules}/material-design-icons/iconfont/MaterialIcons-Regular.ttf') format('truetype');
+// }
+
+// .material-icons {
+//     font-family: 'Material Icons';
+//     font-weight: normal;
+//     font-style: normal;
+//     font-size: 24px;  /* Preferred icon size */
+//     display: inline-block;
+//     line-height: 1;
+//     text-transform: none;
+//     letter-spacing: normal;
+//     word-wrap: normal;
+//     white-space: nowrap;
+//     direction: ltr;
+
+//     /* Support for all WebKit browsers. */
+//     -webkit-font-smoothing: antialiased;
+//     /* Support for Safari and Chrome. */
+//     text-rendering: optimizeLegibility;
+
+//     /* Support for Firefox. */
+//     -moz-osx-font-smoothing: grayscale;
+
+//     /* Support for IE. */
+//     font-feature-settings: 'liga';
+
+//     &.md-80 {
+//         font-size:80px;
+//         line-height: 20px;
+//     }
+// }

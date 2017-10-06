@@ -1,0 +1,817 @@
+/**
+ * ===============================================================
+ * Guide.
+ * ===============================================================
+ */
+@import '../node_modules/foundation-sites/dist/css/foundation.min.css';
+@import '../node_modules/foundation-icon-fonts/foundation-icons.css';
+@import '../node_modules/foundation-icon-fonts/foundation-icons.css';
+@import '../node_modules/swiper/dist/css/swiper.min.css';
+@import '../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.css';
+.row,
+.grid-x {
+  width: 100%;
+}
+/**
+ * ===============================================================
+ * Base
+ * ===============================================================
+ */
+/**
+ * Variables.
+ */
+/**
+ * ===============================================================
+ * Base - functions
+ * ===============================================================
+ */
+/**
+ * Add box shadow.
+ * @param  {[type]} @size: 0             [description]
+ * @param  {[type]} @r:0   [description]
+ * @param  {[type]} @g:0   [description]
+ * @param  {[type]} @b:0   [description]
+ * @param  {[type]} @a:1   [description]
+ * @return {[type]}        [description]
+ */
+/**
+ * Adding animation.
+ * @param  {[type]} @speed: 0.25s         [description]
+ * @return {[type]}         [description]
+ */
+/**
+ * Adding fade in out effect on hover, etc.
+ * @param  {[type]} $property: color         [description]
+ * @param  {[type]} $time:     1s            [description]
+ * @param  {[type]} $method:   ease-in-out   [description]
+ * @return {[type]}            [description]
+ */
+/**
+ * Center element vertically & horizontally.
+ */
+/**
+ * ===============================================================
+ * Dependencies
+ * ===============================================================
+ */
+/**
+ * ===============================================================
+ * HTML/ Global
+ * ===============================================================
+ */
+html,
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  position: relative;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.heading.parent {
+  font-size: 40px !important;
+}
+.card {
+  background-color: #f8f7f5;
+  border: none;
+}
+.card-divider {
+  background-color: #f8f7f5;
+  text-align: center;
+  padding-bottom: 0;
+}
+.card-divider .heading {
+  width: 100%;
+  background-color: none;
+  font-size: 31px;
+  line-height: 32px;
+}
+.card-divider .heading a {
+  color: #000;
+}
+.card-divider .heading a:hover {
+  color: red;
+}
+.card-section {
+  padding-top: 0;
+}
+.card-section hr {
+  width: 50%;
+  border: 1px solid #000;
+}
+.card-section p {
+  letter-spacing: 1.5px;
+}
+.button-black,
+.button-az,
+.button-bid {
+  background-color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.button-black:hover,
+.button-az:hover,
+.button-bid:hover {
+  background-color: red;
+}
+.box-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/**
+ * ===============================================================
+ * Search
+ * ===============================================================
+ */
+.search-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999999;
+  height: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+.search-block .menu-block-search {
+  background-color: #fff;
+  padding-bottom: 40px;
+  display: none;
+}
+.menu-control-search i {
+  color: #313131;
+}
+.menu-control-search a {
+  font-size: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.menu-control-search a:hover {
+  background-color: red;
+}
+.menu-control-search a:hover i {
+  color: #fff;
+}
+.menu-search .input-search-container {
+  width: 90%;
+}
+.menu-search .input-search-container input {
+  font-size: 21px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+.menu-search .button-search-container {
+  width: 10%;
+}
+.menu-search button {
+  width: 100%;
+  font-size: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  .menu-search .input-search-container {
+    width: 85%;
+  }
+  .menu-search .button-search-container {
+    width: 15%;
+  }
+}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .menu-search .input-search-container {
+    width: 85%;
+  }
+  .menu-search .button-search-container {
+    width: 15%;
+  }
+}
+/**
+ * ===============================================================
+ * Header: navbar, menu
+ * ===============================================================
+ */
+.navbar {
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.navbar .navbar-items {
+  border-bottom: 1px solid #e2e1dd;
+}
+.affix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999999;
+  display: none;
+}
+.menu-logo {
+  border-bottom: 1px solid #e2e1dd;
+}
+.menu-logo .site-logo a {
+  font-family: 'Bellefair', serif;
+  font-size: 41px;
+  font-weight: normal !important;
+  text-transform: uppercase;
+  color: #000;
+  padding: 0;
+  margin: 0;
+}
+.menu-mobile-only {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  background-color: #fff;
+  background: #fff;
+}
+.menu-mobile-only i {
+  color: #313131;
+}
+.menu-mobile-only a {
+  font-size: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.menu-mobile-only a:hover {
+  background-color: red;
+}
+.menu-mobile-only a:hover i {
+  color: #fff;
+}
+.menu-access {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999999;
+}
+.menu-access i {
+  color: #313131;
+}
+.button-arrow-up {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 999999;
+  display: none;
+}
+.button-arrow-up:hover i {
+  background-color: red;
+  color: #fff;
+}
+.button-arrow-up i {
+  float: left;
+}
+/* Small only */
+/* Medium only */
+.menu-main {
+  z-index: 99999;
+}
+/**
+ * ===============================================================
+ * Aside: navbar, menu
+ * ===============================================================
+ */
+.navbar-aside {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999999999;
+  height: 100%;
+  display: none;
+}
+.navbar-aside .overlay-menu-aside {
+  height: 100%;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.navbar-aside .menu-block-aside {
+  background-color: #000;
+  display: none;
+}
+.navbar-aside .menu li a {
+  line-height: 40px;
+  background-color: #000;
+}
+.navbar-aside .scrollbar-container {
+  position: relative;
+  width: 100%;
+  height: 85%;
+}
+/**
+ * Break the very long text.
+ * https://stackoverflow.com/questions/45269978/foundation-6-4-1-how-to-fix-the-dropdown-menu-width
+ */
+.accordion-menu.menu > li a {
+  white-space: normal !important;
+}
+.menu-control-aside {
+  border-bottom: 1px solid #e2e1dd;
+}
+.menu-control-aside li a {
+  font-size: 31px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.menu-control-aside li a:hover {
+  background-color: red;
+}
+.menu-control-aside li a i {
+  color: #fff;
+}
+.menu-control-aside li a:hover i {
+  color: #fff;
+}
+.menu-main-aside {
+  border-bottom: 1px solid #e2e1dd;
+}
+.menu-main-aside li a {
+  color: #fff;
+  padding-left: 20px;
+}
+.menu-main-aside li a:hover {
+  color: #ccc;
+}
+.menu-access-aside li a {
+  color: #fff;
+  padding-left: 20px;
+}
+.menu-access-aside li a:hover {
+  color: #ccc;
+}
+/**
+ * ===============================================================
+ * Header: menu/ dropdown
+ * ===============================================================
+ */
+/**
+ * Get rid of the arrow
+ * https://stackoverflow.com/questions/45268043/foundation-6-4-1-how-to-make-the-dropdown-menu-centre-under-its-parent
+ */
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  content: none;
+}
+/**
+ * Change arrow colour.
+ * http://foundation.zurb.com/forum/posts/675
+ */
+/**
+ * Custom arrow.
+ * https://stackoverflow.com/questions/20573331/how-to-style-dropdown-buttons-using-zurb-foundation-5
+ */
+.accordion-menu.menu > li.is-accordion-submenu-parent > a::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -2.5px;
+  top: 22.5px;
+  border: 1px solid #000;
+}
+/**
+ * Place it centered.
+ * Do it dynamically for each dropdown with jQuery.
+ */
+.dropdown.menu > li.opens-right > .is-dropdown-submenu {
+  margin-left: -55px;
+}
+/**
+ * Fix the dropdown width.
+ * https://stackoverflow.com/questions/45269978/foundation-6-4-1-how-to-fix-the-dropdown-menu-width
+ */
+.dropdown.menu > li.opens-right > .is-dropdown-submenu {
+  min-width: 200px !important;
+}
+.dropdown.menu > li.opens-right > .is-dropdown-submenu.language-options {
+  min-width: 110px !important;
+  margin-left: 0;
+}
+/**
+ * Break the very long text.
+ * https://stackoverflow.com/questions/45269978/foundation-6-4-1-how-to-fix-the-dropdown-menu-width
+ */
+.dropdown.menu > li.opens-right > .is-dropdown-submenu a {
+  white-space: normal !important;
+}
+.menu-mobile-only > li > a {
+  line-height: 40px;
+  color: #000000;
+}
+.menu.menu-main > li,
+.menu.menu-access > li {
+  position: relative;
+}
+.menu.menu-main > li > a:not(.child),
+.menu.menu-access > li > a:not(.child) {
+  line-height: 40px;
+  color: #000000;
+}
+.menu.menu-main > li > a:hover:not(.child),
+.menu.menu-access > li > a:hover:not(.child) {
+  color: #000000;
+}
+.menu.menu-main li .line-text,
+.menu.menu-access li .line-text {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.menu.menu-main > li:hover .line-text,
+.menu.menu-access > li:hover .line-text {
+  border-bottom: 1px solid red;
+  color: #000000;
+}
+.menu.menu-main ul,
+.menu.menu-access ul {
+  border: none;
+}
+.menu.menu-main ul li a,
+.menu.menu-access ul li a {
+  width: 100%;
+  color: #000000;
+  line-height: 28px;
+  text-align: center;
+  display: block;
+  border-bottom: 1px solid #e2e1dd;
+  border-left: 1px solid #e2e1dd;
+  border-right: 1px solid #e2e1dd;
+}
+.menu.menu-main ul li:first-child a,
+.menu.menu-access ul li:first-child a {
+  border-top: 1px solid #e2e1dd;
+}
+.menu.menu-main ul li a:hover,
+.menu.menu-access ul li a:hover {
+  color: #fff;
+  background-color: #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.menu.menu-main ul li:first-child a:hover,
+.menu.menu-access ul li:first-child a:hover {
+  border-top: 1px solid black;
+}
+footer .nav-block .menu > li > a:not(.child),
+footer .social-block .menu > li > a:not(.child) {
+  line-height: 40px;
+  color: #000000;
+}
+footer .nav-block .menu > li > a:hover:not(.child),
+footer .social-block .menu > li > a:hover:not(.child) {
+  color: #000000;
+}
+/**
+ * ===============================================================
+ * Main: swiper
+ * ===============================================================
+ */
+main {
+  position: relative;
+}
+.overlay {
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+}
+/**
+ * ===============================================================
+ * Swiper
+ * ===============================================================
+ */
+.banner-swiper-block {
+  /**
+     * Customise the arrow button.
+     * https://stackoverflow.com/questions/45381871/swiper-how-to-customise-arrow-buttons
+     */
+}
+.banner-swiper-block .swiper-container {
+  width: 100%;
+  height: 500px;
+}
+.banner-swiper-block .swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.banner-swiper-block .swiper-slide {
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.banner-swiper-block .swiper-banner-slide {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+.banner-swiper-block .swiper-slide .title {
+  font-family: 'Bellefair', serif;
+  font-size: 41px;
+  line-height: 40px;
+  font-weight: 300;
+}
+.banner-swiper-block .swiper-slide .subtitle {
+  font-size: 21px;
+}
+.banner-swiper-block .swiper-slide .text {
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+.banner-swiper-block .slide-info-container {
+  color: #fff;
+}
+.banner-swiper-block .button.button-details {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+}
+.banner-swiper-block .button.button-details:hover,
+.banner-swiper-block .button.button-details:focus {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+.banner-swiper-block .swiper-button-next,
+.banner-swiper-block .swiper-button-prev {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
+  right: 10px;
+  padding: 30px;
+  display: none;
+}
+.banner-swiper-block .swiper-button-prev {
+  left: 0;
+}
+.banner-swiper-block .swiper-button-next {
+  right: 0;
+}
+.columns-swiper-block .swiper-supper-container {
+  position: relative;
+}
+.columns-swiper-block .swiper-button-prev {
+  left: -60px;
+}
+.columns-swiper-block .swiper-button-next {
+  right: -60px;
+}
+/**
+ * Media query
+ * http://foundation.zurb.com/sites/docs/media-queries.html
+ */
+/* Large and up */
+@media screen and (min-width: 64em) {
+}
+/**
+ * ===============================================================
+ * Home page > Main > Grid item
+ * ===============================================================
+ */
+.heading {
+  font-family: 'Bellefair', serif;
+}
+.grid-block {
+  padding: 30px 0 40px;
+  border-top: 1px solid #e2e1dd;
+}
+.grid-block .heading.parent {
+  padding-bottom: 20px;
+}
+.grid-item .image-container {
+  background-color: #f8f7f5;
+}
+/**
+ * ===============================================================
+ * Grid items > Stack
+ * ===============================================================
+ */
+.grid-stacks .card {
+  padding: 0;
+  margin: 0;
+}
+.grid-stacks .cell {
+  padding: 10px;
+}
+.grid-stacks .cell.stack {
+  padding: 0;
+}
+.grid-stacks .cell.stack .grid-item {
+  margin: 10px;
+}
+.grid-stacks .grid-item {
+  position: relative;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.grid-stacks .button-image {
+  z-index: 99;
+}
+.grid-stacks .image-desc {
+  position: absolute;
+  z-index: 999;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 10px 20px;
+}
+.grid-stacks .image-desc a {
+  color: #fff;
+  font-size: 21px;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+}
+.grid-stacks .image-desc:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.grid-stacks .image-desc:hover a {
+  color: #000;
+}
+.grid-stacks .grid-item:hover .image-desc {
+  display: block;
+}
+.eq-height > .cell {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+.eq-height > .cell {
+  height: 100%;
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {
+}
+/* Large and up */
+@media screen and (min-width: 64em) {
+}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+}
+/**
+ * ===============================================================
+ * Footer
+ * ===============================================================
+ */
+footer {
+  display: block;
+}
+footer .menu li a:hover {
+  color: grey !important;
+}
+footer .nav-block {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: block;
+  width: 100%;
+  background-color: #f8f7f5;
+}
+footer .nav-block .menu:not(.last) li a {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+footer .nav-block .vertical.menu.last li a {
+  font-family: 'Bellefair', serif;
+  font-size: 25px;
+  padding-left: 0;
+  border-bottom: 1px solid #e2e1dd;
+}
+footer .social-block {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+footer .social-block i {
+  font-size: 41px;
+}
+footer .copyright-block {
+  background-color: #000;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+footer .copyright-block p {
+  margin: 0;
+}
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  footer .menu li {
+    text-align: center;
+  }
+}
+/**
+ * ===============================================================
+ * Others - Material Icons
+ * ===============================================================
+ */
+.material-icons {
+  padding: 0;
+  margin: 0;
+}
+.material-icons.md-light {
+  color: #ffffff;
+}
+.material-icons.md-dark-background {
+  background-color: #313131;
+}
+.material-icons.md-60 {
+  font-size: 60px;
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/MaterialIcons-Regular.eot');
+  /* For IE6-8 */
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url('fonts/MaterialIcons-Regular.woff2') format('woff2'), url('fonts/MaterialIcons-Regular.woff') format('woff'), url('fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.material-icons.md-80 {
+  font-size: 80px;
+  line-height: 20px;
+}
+/**
+ * ===============================================================
+ * Customise Foundation font path.
+ * ===============================================================
+ */
+@font-face {
+  font-family: "foundation-icons";
+  src: url("fonts/foundation-icons.eot");
+  src: url("fonts/foundation-icons.eot?#iefix") format("embedded-opentype"), url("fonts/foundation-icons.woff") format("woff"), url("fonts/foundation-icons.ttf") format("truetype"), url("fonts/foundation-icons.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=maps/style.css.map */

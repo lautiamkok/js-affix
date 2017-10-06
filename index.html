@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=500" />
+    <meta name="author" content="" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Paradigm Art Auction</title>
+
+    <!-- jQuery Mobile -->
+    <!-- <link rel="stylesheet" href="vendors/jquery-mobile/jquery.mobile-1.4.5.css" /> -->
+
+    <!-- CDN -->
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+
+    <!-- jQuery -->
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+
+    <!-- CDN -->
+    <!-- https://code.jquery.com/ui/ -->
+    <!-- http://easings.net/# -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> -->
+
+    <!--  jQuery Migrate -->
+    <!-- https://github.com/jquery/jquery-migrate/#readme -->
+    <!-- <script src="node_modules/jquery-migrate/dist/jquery-migrate.min.js"></script> -->
+
+    <!-- Zurb -->
+    <!-- <link href="node_modules/foundation-sites/dist/css/foundation.min.css" rel="stylesheet">
+    <link href="node_modules/foundation-icon-fonts/foundation-icons.css" rel="stylesheet"> -->
+    <!-- <script src="node_modules/foundation-sites/dist/js/foundation.min.js"></script> -->
+
+    <!-- Zurb - CDN -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/css/foundation.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.1/js/foundation.min.js"></script> -->
+
+    <!-- Animate CSS -->
+    <!-- https://github.com/daneden/animate.css -->
+    <!-- <link href="node_modules/animate.css/animate.min.css" rel="stylesheet" > -->
+
+    <!-- Animate CSS CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Bellefair|Raleway" rel="stylesheet">
+
+    <!-- Material+Icons - Google -->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+
+    <!-- AOS Scroll Reveal - CDN -->
+    <!-- <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
+
+    <!-- Swiper -->
+    <!-- http://idangero.us/swiper/#.WXOuaXbytFQ -->
+    <!-- http://idangero.us/swiper/get-started/#.WXOuj3bytFQ -->
+    <!-- <link rel="stylesheet" href="node_modules/swiper/dist/css/swiper.min.css"> -->
+    <!-- <script src="node_modules/swiper/dist/js/swiper.min.js"></script> -->
+
+    <!-- Swiper - CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script> -->
+
+    <!-- Perfect scrollbar -->
+    <!-- <link rel='stylesheet' href='node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.css' /> -->
+
+    <!-- CSS bundle -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="dist/bundle.min.css" rel="stylesheet">
+
+    <!-- JS bundle -->
+    <script src="dist/bundle.min.js"></script>
+
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+<body>
+
+<section>
+    <div class="row search-block overlay-menu-search">
+        <div class="menu-block-search">
+
+            <!-- menu -->
+            <ul class="menu float-right menu-control-search">
+                <li><a href="#" class="button-hide-menu-search"><i class="fi-x"></i></a></li>
+            </ul>
+            <!-- menu -->
+
+            <!-- grid container -->
+            <div class="grid-container">
+
+                <h2 class="heading parent text-center text-uppercase">Search</h2>
+
+                <!-- grid x -->
+                <div class="grid-x grid-padding-x">
+
+                    <!-- item -->
+                    <div class="cell large-6 medium-8 small-12 large-offset-3 medium-offset-2">
+                        <ul class="menu menu-search">
+                          <li class="input-search-container"><input type="search" placeholder="Search" tyle="border: 1px solid red; width: 100%;"></li>
+                          <li class="button-search-container"><button type="button" class="button"><i class="fi-magnifying-glass"></i></button></li>
+                        </ul>
+                    </div>
+                    <!-- item -->
+
+                </div>
+                <!-- grid x -->
+
+            </div>
+            <!-- grid container -->
+
+        </div>
+
+    </div>
+</section>
+
+<aside>
+    <!-- navbar-aside -->
+    <div class="row hide-for-medium hide-for-large navbar-aside">
+
+        <!-- grid-x -->
+        <div class="grid-x overlay-menu-aside">
+
+            <!-- cell/ menu-block-aside -->
+            <div class="small-8 cell menu-block-aside">
+
+                <!-- menu -->
+                <ul class="menu menu-control-aside">
+                    <li><a href="#" class="button-hide-menu-mobile"><i class="fi-x"></i></a></li>
+                </ul>
+                <!-- menu -->
+
+                <div class="scrollbar-container" id="ps-scrollbar">
+
+                    <!-- menu -->
+                    <ul class="vertical menu accordion-menu menu-main-aside" data-accordion-menu>
+                        <li>
+                            <a href="#">About</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="#" class="child">About Paradigm</a></li>
+                                <li><a href="#" class="child">Locations</a></li>
+                                <li><a href="#" class="child">Corporate Social Responsibility</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Buy &amp; Sell</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="#" class="child">Auctions</a></li>
+                                <li><a href="#" class="child">Viewings</a></li>
+                                <li><a href="#" class="child">Valuation Days</a></li>
+                                <li><a href="#" class="child">Live Auctions</a></li>
+                                <li><a href="#" class="child">Online Auctions</a></li>
+                                <li><a href="#" class="child">Premium Calculator</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Gallery</a>
+                            <ul class="menu vertical nested">
+                                <li><a href="#" class="child">About Our Gallerry</a></li>
+                                <li><a href="#" class="child">Exhibitions</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- menu -->
+
+                    <!-- menu -->
+                    <ul class="vertical menu menu-access-aside">
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                    <!-- menu -->
+
+                </div>
+
+            </div>
+            <!-- cell/ menu-block-aside -->
+
+        </div>
+        <!-- grid-x -->
+
+    </div>
+    <!-- navbar-aside -->
+</aside>
+
+<header>
+    <!-- navbar -->
+    <div class="row navbar">
+
+        <ul class="menu menu-mobile-only float-left hide-for-medium hide-for-large">
+            <li><a href="#" class="button-show-menu-main show-for-medium"><i class="fi-list"></i></a></li>
+            <li><a href="#" class="button-hide-menu-main show-for-medium hide"><i class="fi-x"></i></a></li>
+            <li><a href="#" class="button-show-menu-mobile show-for-small-only"><i class="fi-thumbnails"></i></a></li>
+            <!-- <li><a href="#" class="button-hide-menu-mobile show-for-small-only hide"><i class="fi-x"></i></a></li> -->
+        </ul>
+
+        <ul class="menu dropdown menu-access float-right" data-dropdown-menu>
+            <li><a href="#" class="button-show-menu-search"><i class="fi-magnifying-glass"></i><span class="show-for-large"> Search</span></a><span class="line-text"></span></li>
+            <li><a href="#"><i class="fi-lock"></i><span class="show-for-large"> Login</span></a><span class="line-text"></span></li>
+
+            <li>
+                <a href="#" class="language"><i class="fi-widget"></i><span class="show-for-large"> English</span></a><span class="line-text"></span>
+                <ul class="menu vertical language-options">
+                  <li><a href="#" class="child">繁體中文</a></li>
+                  <li><a href="#" class="child">简体中文</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="menu align-center menu-logo">
+            <li class="menu-text site-logo"><a href="#">Paradigm</a></li>
+        </ul>
+
+        <ul class="menu align-center dropdown hide-for-small-only menu-main navbar-items" data-dropdown-menu data-opacity-target=".overlay">
+            <li class="is-activex">
+                <a href="#">About</a><span class="line-text"></span>
+                <ul class="menu vertical">
+                    <li><a href="#" class="child">About Paradigm</a></li>
+                    <li><a href="#" class="child">Locations</a></li>
+                    <li><a href="#" class="child">Corporate Social Responsibility</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Buy &amp; Sell</a><span class="line-text"></span>
+                <ul class="menu vertical">
+                    <li><a href="#" class="child">Auctions</a></li>
+                    <li><a href="#" class="child">Viewings</a></li>
+                    <li><a href="#" class="child">Valuation Days</a></li>
+                    <li><a href="#" class="child">Live Auctions</a></li>
+                    <li><a href="#" class="child">Online Auctions</a></li>
+                    <li><a href="#" class="child">Premium Calculator</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Gallery</a><span class="line-text"></span>
+                <ul class="menu vertical">
+                    <li><a href="#" class="child">About Our Gallerry</a></li>
+                    <li><a href="#" class="child">Exhibitions</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+    <!-- navbar -->
+
+    <a href="#" class="button-arrow-up"><i class="material-icons md-60 md-dark-background md-light">keyboard_arrow_up</i></a>
+</header>
+
+<!-- <div class="overlay"></div> -->
+
+<main>
+    <div class="row banner-swiper-block">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <!-- <div class="parallax-bg" style="background-image:url(http://lorempixel.com/900/600/nightlife/2/)" data-swiper-parallax="-23%"></div> -->
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/1.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 1</h3>
+                                <div class="text">
+                                    <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. </p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/2.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 2</h3>
+                                <div class="text">
+                                    <p>Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/3.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 3</h3>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. </p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/4.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 4</h3>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. </p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/5.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 5</h3>
+                                <div class="text">
+                                    <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-black"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-black swiper-arrow hide-for-small-only hide-for-medium-only"></div>
+            <div class="swiper-button-prev swiper-button-black swiper-arrow hide-for-small-only hide-for-medium-only"></div>
+        </div>
+        <!-- Swiper -->
+    </div>
+
+    <!-- row block -->
+    <div class="row grid-block">
+
+        <!-- grid container -->
+        <div class="grid-container">
+
+            <h2 class="heading parent text-center text-uppercase">Latest</h2>
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+
+                <!-- item -->
+                <div class="cell large-4 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card grid-item">
+                        <a href="#" class="button-image image-container"><img src="images/a.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo</a></h4>
+                        </div>
+
+                        <div class="card-section  text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                            <a href="#features" class="button button-bid">Bid Now</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-4 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card grid-item">
+                        <a href="#" class="button-image image-container"><img src="images/b.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo</a></h4>
+                        </div>
+
+                        <div class="card-section  text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Nulla laoreet justo vitae porttitor porttitor. </p>
+                            <a href="#features" class="button button-bid">Bid Now</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-4 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card grid-item">
+                        <a href="#" class="button-image image-container"><img src="images/c.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo</a></h4>
+                        </div>
+
+                        <div class="card-section  text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                            <a href="#features" class="button button-bid">Bid Now</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-4 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card grid-item">
+                        <a href="#" class="button-image image-container"><img src="images/d.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                            <a href="#features" class="button button-bid">Bid Now</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-4 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card grid-item">
+                        <a href="#" class="button-image image-container"><img src="images/e.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo</a></h4>
+                        </div>
+
+                        <div class="card-section  text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                            <a href="#features" class="button button-bid">Bid Now</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-4 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card grid-item">
+                        <a href="#" class="button-image image-container"><img src="images/f.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                            <a href="#features" class="button button-bid">Bid Now</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+            </div>
+            <!-- grid x -->
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                    <a href="#" class="button button-black float-right">Explore More&nbsp;&nbsp;<i class="fi-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- grid x -->
+
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+
+    <!-- row block -->
+    <div class="row grid-block">
+
+        <!-- grid container -->
+        <div class="grid-container">
+
+            <h2 class="heading parent text-center text-uppercase">Artists in the Collection</h2>
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/i.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/ii.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/iii.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/iv.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+            </div>
+            <!-- grid x -->
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                    <a href="#" class="button button-az float-right">Artists A-Z&nbsp;&nbsp;<i class="fi-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- grid x -->
+
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+
+    <div class="row banner-swiper-block">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/1a.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 1</h3>
+                                <div class="text">
+                                    <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod. </p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">Become a Member</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/1b.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 2</h3>
+                                <div class="text">
+                                    <p>Aliquam hendrerit lorem at elit facilisis rutrum. Ut at ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut libero. Aenean feugiat non eros quis feugiat.</p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/1c.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 3</h3>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. </p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/1d.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 4</h3>
+                                <div class="text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor porttitor. </p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+                <div class="swiper-slide swiper-banner-slide" style="background-image: url('images/1e.jpg')">
+
+                    <!-- grid container -->
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                          <div class="small-12 medium-10 large-8 large-offset-2 medium-offset-1 cell slide-info-container">
+                                <h3 class="title">Aliquam dictum mattis velit 5</h3>
+                                <div class="text">
+                                    <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                </div>
+                                <a href="#features" class="hollow button button-details">More Details</a>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- grid container -->
+
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-black"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-black swiper-arrow hide-for-small-only hide-for-medium-only"></div>
+            <div class="swiper-button-prev swiper-button-black swiper-arrow hide-for-small-only hide-for-medium-only"></div>
+        </div>
+        <!-- Swiper -->
+    </div>
+
+    <!-- row block -->
+    <div class="row grid-block">
+
+        <!-- grid container -->
+        <div class="grid-container">
+
+            <h2 class="heading parent text-center text-uppercase">Art in the Collection</h2>
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/v.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/vi.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/vii.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6">
+
+                    <!-- image has no padding -->
+                    <div class="card">
+                        <a href="#" class="button-image image-container"><img src="images/viii.jpg" class="float-center"></a>
+                        <div class="card-divider text-center">
+                            <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                        </div>
+
+                        <div class="card-section text-center">
+                            <hr>
+                            <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+            </div>
+            <!-- grid x -->
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                    <a href="#" class="button button-black float-right">Explore More&nbsp;&nbsp;<i class="fi-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- grid x -->
+
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+
+    <!-- row block -->
+    <div class="row grid-block">
+
+        <!-- grid container -->
+        <div class="grid-container">
+
+            <h2 class="heading parent text-center text-uppercase">In Our Gallery</h2>
+
+            <!-- grid x: grid-stacks -->
+            <!-- keep this for checking -->
+            <!-- <div class="grid-x   eq-height grid-stacks" data-equalizer>
+
+                <div class="medium-8 cell" data-equalizer-watch>
+                    <div class="card grid-item"><img src="http://placehold.it/400x803" class="float-center"></div>
+                </div>
+
+                <div class="medium-4 cell stack" data-equalizer-watch>
+                    <div class="card grid-item"><img src="http://placehold.it/800x400" class="float-center"></div>
+                    <div class="card grid-item"><img src="http://placehold.it/800x600" class="float-center"></div>
+                </div>
+
+            </div> -->
+            <!-- grid x: grid-stacks -->
+
+            <!-- grid x: grid-stacks -->
+            <div class="grid-x grid-stacks eq-height" data-equalizer>
+
+                <!-- item -->
+                <div class="large-8 cell" data-equalizer-watch>
+
+                    <div class="card grid-item">
+                        <a href="#" class="button-image"><img src="images/2a.jpg" class="float-center"></a>
+                        <p class="image-desc"><a href="#">Suspendisse in sem justo 1</a></p>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+                <!-- item: stack -->
+                <div class="large-4 cell stack" data-equalizer-watch>
+
+                    <div class="card grid-item">
+                        <a href="#" class="button-image"><img src="images/2b.jpg" class="float-center"></a>
+                        <p class="image-desc"><a href="#">Suspendisse in sem justo 1</a></p>
+                    </div>
+
+                    <div class="card grid-item">
+                        <a href="#" class="button-image"><img src="images/2c.jpg" class="float-center"></a>
+                        <p class="image-desc"><a href="#">Suspendisse in sem justo 1</a></p>
+                    </div>
+
+                </div>
+                <!-- item: stack -->
+
+            </div>
+            <!-- grid x: grid-stacks -->
+
+            <!-- grid x: grid-stacks -->
+            <div class="grid-x grid-stacks eq-height" data-equalizer>
+
+                <!-- item: stack -->
+                <div class="large-4 cell stack" data-equalizer-watch>
+
+                    <div class="card grid-item">
+                        <a href="#" class="button-image"><img src="images/2d.jpg" class="float-center"></a>
+                        <p class="image-desc"><a href="#">Suspendisse in sem justo 1</a></p>
+                    </div>
+
+                    <div class="card grid-item">
+                        <a href="#" class="button-image"><img src="images/2e.jpg" class="float-center"></a>
+                        <p class="image-desc"><a href="#">Suspendisse in sem justo 1</a></p>
+                    </div>
+
+                </div>
+                <!-- item: stack -->
+
+                <!-- item -->
+                <div class="large-8 cell" data-equalizer-watch>
+
+                    <div class="card grid-item">
+                        <a href="#" class="button-image"><img src="images/2f.jpg" class="float-center"></a>
+                        <p class="image-desc"><a href="#">Suspendisse in sem justo 1</a></p>
+                    </div>
+
+                </div>
+                <!-- item -->
+
+            </div>
+            <!-- grid x: grid-stacks -->
+
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+
+    <!-- row block -->
+    <div class="row grid-block columns-swiper-block columns-4">
+
+        <!-- grid container -->
+        <div class="grid-container">
+
+            <h2 class="heading parent text-center text-uppercase">Events</h2>
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+
+                <!-- item -->
+                <div class="cell small-12 swiper-supper-container">
+
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/i.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 1</a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/ii.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 2</a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/iii.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 3</a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/iv.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 4 </a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/v.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 5</a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/vi.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 6</a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/vii.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 7</a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <!-- image has no padding -->
+                                <div class="card">
+                                    <a href="#" class="button-image image-container"><img src="images/viii.jpg" class="float-center"></a>
+                                    <div class="card-divider text-center">
+                                        <h4 class="heading"><a href="#">Suspendisse in sem justo 8</a></h4>
+                                    </div>
+
+                                    <div class="card-section text-center">
+                                        <hr>
+                                        <p>Nulla laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination swiper-pagination-black"></div>
+
+                    </div>
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-black hide-for-small-only hide-for-medium-only hide-for-large-only"></div>
+                    <div class="swiper-button-prev swiper-button-black hide-for-small-only hide-for-medium-only hide-for-large-only"></div>
+
+                </div>
+                <!-- item -->
+
+            </div>
+            <!-- grid x -->
+
+            <!-- grid x -->
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 cell">
+                    <a href="#" class="button button-black float-right">Explore More&nbsp;&nbsp;<i class="fi-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- grid x -->
+
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+</main>
+
+<footer>
+    <!-- row block -->
+    <div class="row nav-block">
+
+        <!-- grid container -->
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x" data-equalizer>
+
+                <!-- item -->
+                <div class="cell large-3 medium-6" data-equalizer-watch>
+
+                    <ul class="vertical menu">
+                        <li class="menu-text">ABOUT US</li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Corporate Social Responsibility</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Corporate Entities</a></li>
+                    </ul>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6" data-equalizer-watch>
+
+                    <ul class="vertical menu">
+                        <li class="menu-text">PARTNER WITH US</li>
+                        <li><a href="#">Galleries</a></li>
+                        <li><a href="#">Museums</a></li>
+                        <li><a href="#">Auctions</a></li>
+                    </ul>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6" data-equalizer-watch>
+
+                    <ul class="vertical menu">
+                        <li class="menu-text">MORE</li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Modern Slavery Statement</a></li>
+                    </ul>
+
+                </div>
+                <!-- item -->
+
+                <!-- item -->
+                <div class="cell large-3 medium-6" data-equalizer-watch>
+
+                    <ul class="vertical menu last">
+                        <li><a href="#">How to Buy</a></li>
+                        <li><a href="#">How to Sell</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Private Sales</a></li>
+                    </ul>
+
+                </div>
+                <!-- item -->
+
+            </div>
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+
+    <!-- row block -->
+    <div class="row social-block">
+
+        <!-- grid container -->
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <!-- item -->
+                <div class="cell small-12">
+                    <ul class="menu align-center">
+                        <li><a href="#" title="Facebook"><i class="fi-social-facebook"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fi-social-twitter"></i></a></li>
+                        <li><a href="#" title="Instagram"><i class="fi-social-instagram"></i></a></li>
+                        <li><a href="#" title="Youtube"><i class="fi-social-youtube"></i></a></li>
+                        <li><a href="#" title="Vimeo"><i class="fi-social-vimeo"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+
+    <!-- row block -->
+    <div class="row copyright-block">
+
+        <!-- grid container -->
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+                <!-- item -->
+                <div class="cell small-12">
+                    <p class="text-center"> &copy; Paradigm</p>
+                </div>
+            </div>
+        </div>
+        <!-- grid container -->
+
+    </div>
+    <!-- row block -->
+</footer>
+
+</body>
+</html>
