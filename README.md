@@ -1,7 +1,9 @@
 Js Affix
 ===========
 
-> Creating an affix navigation with CSS & JavaScript.
+> Creating an affixed navigation with CSS & JavaScript. A project sample attached.
+
+Read the post [here](https://www.codementor.io/lautiamkok/js-tips-creating-your-own-affix-with-css-jquery-cmdspt275) about this repository.
 
 Quick start
 =============
